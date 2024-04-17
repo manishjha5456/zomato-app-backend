@@ -20,11 +20,11 @@ const RestaurantController = {
     },
     
     filter: async(request,response)=>{
-        let {meal_type} = request.body;
+        let {meal_type,sort} = request.body;
         let filterData = {};
-        let sort = 1;
+        
         if(meal_type !== undefined) filterData['mealtype_id'] = meal_type;
-        console.log(filterData);
+        //console.log(filterData);
         let result = await RestaurantModel.find(filterData).sort({ min_price: sort});  
         response.send({
             status:true,
