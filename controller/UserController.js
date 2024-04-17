@@ -6,7 +6,7 @@ const UserController = {
             f_name:user_details.f_name,
             l_name:user_details.l_name,
             email:user_details.email,
-            mobile_no:user_details.mobile_no,
+            mobile:user_details.mobile,
             password:user_details.password
         }
          new UserModel(sendData).save();
